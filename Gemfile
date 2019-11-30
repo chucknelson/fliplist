@@ -13,11 +13,13 @@ end
 
 # Use SimpleCov for test coverage
 group :test do
+  # Use sqlite3 as the database for tests
+  gem 'sqlite3', '~> 1.3.0'
+  # assigns has been extracted to a gem as of Rails 5.0
+  gem 'rails-controller-testing'
   gem 'simplecov', '~> 0.17', :require => false
+  
 end
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
 
 group :production do
 	gem 'rails_12factor' # required for heroku Rails 4 asset pipeline compatability
@@ -27,9 +29,6 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.3.0', :group => :test
 
 # Use postgres as the database to minimize compatability issues with Heroku
 gem 'pg', '~> 0.21'
