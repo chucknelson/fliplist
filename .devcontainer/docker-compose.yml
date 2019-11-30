@@ -27,7 +27,7 @@ services:
     environment:
       POSTGRES_PASSWORD: password
     volumes:
-      - "r4list-db-data:/var/lib/postgresql/data"
+      - "db-data:/var/lib/postgresql/data"
 
 volumes:
-  r4list-db-data:
+  db-data:
