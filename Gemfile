@@ -4,8 +4,7 @@ source 'https://rubygems.org'
 ruby '2.4.9'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-# Using 4.1.x versions (don't want to automatically update to 4.x)
-gem 'rails', '~> 4.2.0'
+gem 'rails', '~> 5.0.0'
 
 group :development do
   # cool interactive console that can be used if a page errors out
