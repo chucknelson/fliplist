@@ -1,5 +1,5 @@
-# r4list
-A simple list web app implemented in Rails 4.0.
+# Fliplist
+A simple list web app...that flips!
 
 ## Development
-The recommended way for developing `r4list` is with Visual Studio Code's [Remote - Containers](https://code.visualstudio.com/docs/remote/containers) extension.
+The recommended way for developing Fliplist is with Visual Studio Code's [Remote - Containers](https://code.visualstudio.com/docs/remote/containers) extension.

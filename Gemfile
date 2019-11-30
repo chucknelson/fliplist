@@ -21,7 +21,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :production do
-	gem 'rails_12factor' #required for heroku rails 4 asset pipeline compatability
+	gem 'rails_12factor' # required for heroku Rails 4 asset pipeline compatability
 end
 
 group :doc do
