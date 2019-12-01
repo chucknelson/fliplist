@@ -47,12 +47,12 @@ gem 'jquery-rails', '~> 4.0'
 gem 'jquery-ui-rails', '~> 4.0'
 
 #jquery UI touch punch to enable sorting on the iPhone / touch screens
-gem 'touchpunch-rails'
+gem 'touchpunch-rails', '~> 1.0'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'turbolinks', '~> 2.5' # 2.x is last version supported by jquery-turbolinks
 # gem to allow jquery binding to work easily with turbolinks
-gem 'jquery-turbolinks'
+gem 'jquery-turbolinks', '~> 2.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'

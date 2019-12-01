@@ -165,9 +165,8 @@ GEM
     tilt (2.0.10)
     touchpunch-rails (1.0.3)
       railties (>= 3.1)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
+    turbolinks (2.5.4)
+      coffee-rails
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
@@ -190,7 +189,7 @@ DEPENDENCIES
   coffee-rails (~> 5.0)
   jbuilder (~> 2.0)
   jquery-rails (~> 4.0)
-  jquery-turbolinks
+  jquery-turbolinks (~> 2.0)
   jquery-ui-rails (~> 4.0)
   listen (~> 3.2)
   pg (~> 1.1)
@@ -201,8 +200,8 @@ DEPENDENCIES
   sassc-rails (~> 2.1)
   simplecov (~> 0.17)
   sqlite3 (~> 1.4)
-  touchpunch-rails
-  turbolinks
+  touchpunch-rails (~> 1.0)
+  turbolinks (~> 2.5)
   uglifier (~> 4.2)
   web-console (~> 3.7)
 
