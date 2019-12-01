@@ -12,10 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2016_08_17_022150) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "items", id: :serial, force: :cascade do |t|
+  create_table "items", force: :cascade do |t|
     t.string "name"
     t.integer "list_id"
     t.datetime "created_at"
@@ -25,7 +22,7 @@ ActiveRecord::Schema.define(version: 2016_08_17_022150) do
     t.index ["list_id"], name: "index_items_on_list_id"
   end
 
-  create_table "lists", id: :serial, force: :cascade do |t|
+  create_table "lists", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -33,7 +30,7 @@ ActiveRecord::Schema.define(version: 2016_08_17_022150) do
     t.integer "items_remaining", default: 0
   end
 
-  create_table "users", id: :serial, force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
