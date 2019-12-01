@@ -33,7 +33,7 @@ gem "bootsnap", "~> 1.4"
 gem 'pg', '~> 1.1'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sassc-rails', '~> 2.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '~> 4.0'
