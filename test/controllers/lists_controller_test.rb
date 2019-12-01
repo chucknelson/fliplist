@@ -26,7 +26,7 @@ class ListsControllerTest < ActionController::TestCase
 
   test "should create an empty list successfully" do
     new_list = List.new(title: "New List")
-    post :create, {user_id: @user.id, list: {title: new_list.title}}
+    post :create, params: {user_id: @user.id, list: {title: new_list.title}}
     assert_response :redirect
 
     # Verify saved state

@@ -1,4 +1,4 @@
-class Item < ActiveRecord::Base
+class Item < ApplicationRecord
   belongs_to :list
 
   validates :list, presence: true
