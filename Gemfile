@@ -22,10 +22,6 @@ group :test do
   gem 'simplecov', '~> 0.17', :require => false
 end
 
-group :production do
-	gem 'rails_12factor' # required for heroku Rails 4 asset pipeline compatability
-end
-
 # Added in Rails 5.2 to improve app boot time
 gem "bootsnap", "~> 1.4"
 
@@ -55,10 +51,10 @@ gem 'turbolinks', '~> 2.5' # 2.x is last version supported by jquery-turbolinks
 gem 'jquery-turbolinks', '~> 2.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder', '~> 2.9'
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.0'
+gem 'bcrypt', '~> 3.1'
 
 # Use puma for app server
-gem 'puma'
+gem 'puma', '~> 4.3'
