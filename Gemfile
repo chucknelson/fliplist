@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.0'
 
 group :development do
   # cool interactive console that can be used if a page errors out
-  gem 'web-console', '~> 3.7' # 3.x is the last version with Ruby 2.4 support
+  gem 'web-console', '~> 3.7' # 3.x is the last version with Rails 5 support
   # required for listening to file changes during development
   gem "listen", "~> 3.2"
 end
@@ -16,9 +16,9 @@ end
 # Use SimpleCov for test coverage
 group :test do
   # Use sqlite3 as the database for tests
-  gem 'sqlite3', '~> 1.3.0'
+  gem 'sqlite3', '~> 1.4'
   # assigns has been extracted to a gem as of Rails 5.0
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '~> 1.0'
   gem 'simplecov', '~> 0.17', :require => false
 end
 
