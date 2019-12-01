@@ -4,11 +4,13 @@ source 'https://rubygems.org'
 ruby '2.4.9'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.1.0'
 
 group :development do
   # cool interactive console that can be used if a page errors out
-  gem 'web-console', '3.3.0' # last release with Rails 4.2 support
+  gem 'web-console', '~> 3.7' # 3.x is the last version with Ruby 2.4 support
+  # required for listening to file changes during development
+  gem "listen", "~> 3.2"
 end
 
 # Use SimpleCov for test coverage
