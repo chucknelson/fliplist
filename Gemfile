@@ -18,7 +18,6 @@ group :test do
   # assigns has been extracted to a gem as of Rails 5.0
   gem 'rails-controller-testing'
   gem 'simplecov', '~> 0.17', :require => false
-  
 end
 
 group :production do
