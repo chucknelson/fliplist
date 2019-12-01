@@ -26,11 +26,6 @@ group :production do
 	gem 'rails_12factor' # required for heroku Rails 4 asset pipeline compatability
 end
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
 # Added in Rails 5.2 to improve app boot time
 gem "bootsnap", "~> 1.4"
 
