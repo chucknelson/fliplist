@@ -30,7 +30,7 @@ end
 gem "bootsnap", "~> 1.4"
 
 # Use postgres as the database to minimize compatability issues with Heroku
-gem 'pg', '~> 0.21'
+gem 'pg', '~> 1.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

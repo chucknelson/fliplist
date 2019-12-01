@@ -96,7 +96,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
-    pg (0.21.0)
+    pg (1.1.4)
     puma (4.3.0)
       nio4r (~> 2.0)
     rack (2.0.7)
@@ -196,7 +196,7 @@ DEPENDENCIES
   jquery-turbolinks
   jquery-ui-rails (~> 4.0)
   listen (~> 3.2)
-  pg (~> 0.21)
+  pg (~> 1.1)
   puma
   rails (~> 5.2.0)
   rails-controller-testing (~> 1.0)
