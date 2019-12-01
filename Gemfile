@@ -31,6 +31,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Added in Rails 5.2 to improve app boot time
+gem "bootsnap", "~> 1.4"
+
 # Use postgres as the database to minimize compatability issues with Heroku
 gem 'pg', '~> 0.21'
 
