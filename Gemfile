@@ -36,10 +36,11 @@ gem 'pg', '~> 1.1'
 gem 'sassc-rails', '~> 2.1'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '~> 4.0'
+gem 'uglifier', '~> 4.2'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0'
+# TODO: Move away from coffee and switch to modern javascript
+gem 'coffee-rails', '~> 5.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 4.0'
