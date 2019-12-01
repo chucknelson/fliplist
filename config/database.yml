@@ -14,6 +14,13 @@ test:
   pool: 5
   timeout: 5000
 
+# test:
+#   adapter: postgresql
+#   host: db
+#   database: fliplist-test
+#   username: postgres
+#   password: password
+
 production:
   adapter: sqlite3
   database: db/production.sqlite3

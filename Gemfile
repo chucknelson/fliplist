@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby '2.4.9'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.0'
+gem 'rails', '~> 5.2.0'
 
 group :development do
   # cool interactive console that can be used if a page errors out
@@ -30,6 +30,9 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+# Added in Rails 5.2 to improve app boot time
+gem "bootsnap", "~> 1.4"
 
 # Use postgres as the database to minimize compatability issues with Heroku
 gem 'pg', '~> 0.21'
