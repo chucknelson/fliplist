@@ -16,7 +16,7 @@ class ItemsControllerTest < ActionController::TestCase
     expected_items_count = @list.items.count + 1
     expected_item_remaining_count = @list.items.where(completed: false).count + 1
 
-    post :create, {user_id: @user.id, list_id: @list.id, item: {name: "New Item", completed: false}}
+    post :create, params: {user_id: @user.id, list_id: @list.id, item: {name: "New Item", completed: false}}
     assert_response :redirect
     
     assert_equal expected_items_count, @list.items.count # reload not required because items.count is triggering a query (i.e., value isn't assigned anywhere yet)
@@ -26,7 +26,7 @@ class ItemsControllerTest < ActionController::TestCase
   test "should update item successfully" do
     item = get_incomplete_item(@list)
     updated_name = "Updated Name"
-    patch :update, {format: 'js', user_id: @user.id, list_id: @list.id, id: item.id, item: {name: updated_name}}
+    patch :update, params: {format: 'js', user_id: @user.id, list_id: @list.id, id: item.id, item: {name: updated_name}}
     assert_response :success
 
     assert_equal updated_name, item.reload.name
@@ -36,7 +36,7 @@ class ItemsControllerTest < ActionController::TestCase
     expected_item_remaining_count = @list.items.where(completed: false).count - 1
 
     item = get_incomplete_item(@list)
-    patch :update, {format: 'js', user_id: @user.id, list_id: @list.id, id: item.id, item: {completed: true}}
+    patch :update, params: {format: 'js', user_id: @user.id, list_id: @list.id, id: item.id, item: {completed: true}}
     assert_response :success
 
     assert_equal expected_item_remaining_count, @list.reload.items_remaining
@@ -47,7 +47,7 @@ class ItemsControllerTest < ActionController::TestCase
     expected_item_remaining_count = @list.items.where(completed: false).count - 1
 
     item = get_incomplete_item(@list)
-    delete :destroy, {user_id: @user.id, list_id: @list.id, id: item.id}
+    delete :destroy, params: {user_id: @user.id, list_id: @list.id, id: item.id}
     assert_response :redirect
     assert_equal "Item deleted", flash[:notice]
 
