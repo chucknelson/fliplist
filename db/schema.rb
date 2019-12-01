@@ -10,6 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+# NOTE: As of 2019-12-01, this schema has been generated running 'rails db:migrate RAILS_ENV=test'
+# It reflects the test database implementation (sqlite3)
+# To have it reflect the development and production databse (postgres), we'd need
+# to run tests against postgres as well, which I don't want to do right now...?
+# Known issue: https://github.com/rails/rails/issues/26209
+
 ActiveRecord::Schema.define(version: 2016_08_17_022150) do
 
   create_table "items", force: :cascade do |t|
