@@ -13,7 +13,7 @@ class ListsControllerTest < ActionController::TestCase
   end
 
   test "should have user with lists that have items" do
-    get :index, nil
+    get :index
     assert_response :success
 
     user_lists = assigns(:lists)
