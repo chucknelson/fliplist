@@ -8,7 +8,7 @@ gem 'rails', '~> 6.0.0'
 
 group :development do
   # cool interactive console that can be used if a page errors out
-  gem 'web-console', '~> 3.7' # 3.x is the last version with Rails 5 support
+  gem 'web-console', '~> 4.0'
   # required for listening to file changes during development
   gem "listen", "~> 3.2"
 end
