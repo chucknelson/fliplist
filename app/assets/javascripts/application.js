@@ -10,10 +10,11 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+// TODO: Move libraries to Webpacker (/app/javascript)
+// Can also remove gems since they'll be regular npm dependencies
+
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery.ui.all
-// require jquery.ui.touch-punch
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
