@@ -28,11 +28,11 @@ gem "bootsnap", "~> 1.4"
 # Use postgres as the database to minimize compatability issues with Heroku
 gem 'pg', '~> 1.1'
 
+# Webpacker for javascript packaging
+gem 'webpacker', '~> 4.2'
+
 # Use SCSS for stylesheets
 gem 'sassc-rails', '~> 2.1'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '~> 4.2'
 
 # Use CoffeeScript for .js.coffee assets and views
 # TODO: Move away from coffee and switch to modern javascript
