@@ -42,9 +42,6 @@ gem 'coffee-rails', '~> 5.0'
 gem 'jquery-rails', '~> 4.0'
 gem 'jquery-ui-rails', '~> 4.0'
 
-#jquery UI touch punch to enable sorting on the iPhone / touch screens
-gem 'touchpunch-rails', '~> 1.0'
-
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', '~> 2.5' # 2.x is last version supported by jquery-turbolinks
 # gem to allow jquery binding to work easily with turbolinks
