@@ -4,11 +4,11 @@ source 'https://rubygems.org'
 ruby '2.5.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 6.0.0'
 
 group :development do
   # cool interactive console that can be used if a page errors out
-  gem 'web-console', '~> 3.7' # 3.x is the last version with Rails 5 support
+  gem 'web-console', '~> 4.0'
   # required for listening to file changes during development
   gem "listen", "~> 3.2"
 end
@@ -28,11 +28,11 @@ gem "bootsnap", "~> 1.4"
 # Use postgres as the database to minimize compatability issues with Heroku
 gem 'pg', '~> 1.1'
 
+# Webpacker for javascript packaging
+gem 'webpacker', '~> 4.2'
+
 # Use SCSS for stylesheets
 gem 'sassc-rails', '~> 2.1'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '~> 4.2'
 
 # Use CoffeeScript for .js.coffee assets and views
 # TODO: Move away from coffee and switch to modern javascript
@@ -41,9 +41,6 @@ gem 'coffee-rails', '~> 5.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 4.0'
 gem 'jquery-ui-rails', '~> 4.0'
-
-#jquery UI touch punch to enable sorting on the iPhone / touch screens
-gem 'touchpunch-rails', '~> 1.0'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', '~> 2.5' # 2.x is last version supported by jquery-turbolinks
