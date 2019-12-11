@@ -10,6 +10,7 @@ services:
       dockerfile: .devcontainer/Dockerfile
     ports:
       - 3000:3000
+      - 3035:3035 # webpack-dev-server
     volumes:
       # Bind mount our code to /workspace
       - ..:/workspace

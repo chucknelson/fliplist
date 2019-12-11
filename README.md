@@ -2,4 +2,10 @@
 A simple list web app...that flips!
 
 ## Development
-The recommended way for developing Fliplist is with Visual Studio Code's [Remote - Containers](https://code.visualstudio.com/docs/remote/containers) extension.
+Fliplist is developed using Visual Studio Code's [Remote - Containers](https://code.visualstudio.com/docs/remote/containers) extension.
+
+To run locally during development:
+```
+heroku local -f Procfile.dev
+```
+See: [Heroku > Running Apps Locally](https://devcenter.heroku.com/articles/heroku-local)
