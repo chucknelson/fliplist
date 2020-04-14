@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #use specific version of ruby
-ruby '2.5.7'
+ruby '2.5.8'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
