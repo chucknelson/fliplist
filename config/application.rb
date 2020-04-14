@@ -15,5 +15,16 @@ module Fliplist
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # Get around Sprockets issue with bind mounts? 
+    # See: 
+    # - https://github.com/research-technologies/dart_provisioning/wiki/Vagrant-and-Rails-with-shared-folders-on-a-Windows-host
+    # - https://github.com/rails/sprockets/issues/283
+    # - https://github.com/indentlabs/notebook/issues/598
+    config.assets.configure do |env|
+      env.cache = Sprockets::Cache::FileStore.new(
+          File.join(ENV['RAILS_TMP'], 'cache/assets')
+      )
+    end if ENV['RAILS_TMP']
   end
 end
