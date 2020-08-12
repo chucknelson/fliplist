@@ -38,15 +38,6 @@ gem 'sassc-rails', '~> 2.1'
 # TODO: Move away from coffee and switch to modern javascript
 gem 'coffee-rails', '~> 5.0'
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails', '~> 4.0'
-gem 'jquery-ui-rails', '~> 4.0'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '~> 2.5' # 2.x is last version supported by jquery-turbolinks
-# gem to allow jquery binding to work easily with turbolinks
-gem 'jquery-turbolinks', '~> 2.0'
-
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.9'
 
