@@ -6,11 +6,12 @@
   "extends": [
     "standard"
   ],
+  "globals": {
+    "$": "readonly" // Global jQuery reference
+  },
   "parserOptions": {
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "rules": {
-    "no-undef": "warn"
-  }
+  "rules": {}
 }
