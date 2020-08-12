@@ -13,5 +13,7 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    "space-before-function-paren": "off"
+  }
 }
