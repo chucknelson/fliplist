@@ -1,0 +1,19 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "standard"
+  ],
+  "globals": {
+    "$": "readonly" // Global jQuery reference
+  },
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "rules": {
+    "space-before-function-paren": "off"
+  }
+}
