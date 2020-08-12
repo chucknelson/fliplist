@@ -18,7 +18,6 @@
 require("jquery")
 require("jquery-ujs")
 require("jquery-ui/ui/widgets/sortable")
-
 require("turbolinks").start()
 
 require("../global")

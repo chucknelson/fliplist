@@ -34,10 +34,6 @@ gem 'webpacker', '~> 4.2'
 # Use SCSS for stylesheets
 gem 'sassc-rails', '~> 2.1'
 
-# Use CoffeeScript for .js.coffee assets and views
-# TODO: Move away from coffee and switch to modern javascript
-gem 'coffee-rails', '~> 5.0'
-
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.9'
 
