@@ -2,12 +2,11 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-jQuery ->
+$(document).on "turbolinks:load", ->
 	$('#list-items').sortable(
 		containment: 'document'
 		items: 'li'
 		cancel: '.no-sort'
-		
 
 		#defining the helper as a static li > table element works much better/easier than changing
 		#the entire list structure, styling, and animation to work with li > table elements
