@@ -7,6 +7,8 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module Fliplist
+  VERSION = File.open('VERSION', &:readline)
+
   class Application < Rails::Application
     # Initialize configuration defaults for current Rails version.
     config.load_defaults 6.0
