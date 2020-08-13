@@ -52,14 +52,15 @@ h1 {
 	}
 }
 
-#content-container {
-
-}
-
-#login-container {	
+#login-container {
 	display: block;
 	padding-top: .5em;
 	border-top: 1px solid #eee;
+}
+
+#version {
+  float: right;
+  color: #ccc;
 }
 
 #generic-view-container {
@@ -162,7 +163,9 @@ a.link-button {
 			//background-color: #fff;
 			border-bottom: 1px solid #ddd;
 			&:first-child { 
-				border-top: 1px solid #ddd; 
+        border-top: 1px solid #ddd; 
+        box-shadow: 
+					inset 0px 5px 5px -5px #cdcdcd;
 				-webkit-box-shadow: 
 					inset 0px 5px 5px -5px #cdcdcd;
 			}
@@ -180,7 +183,7 @@ a.link-button {
 				color: #000;
 				text-decoration: none;
 				vertical-align: middle;
-
+        transition: inherit; 
 				-webkit-transition: inherit; 
 			}
 		}
