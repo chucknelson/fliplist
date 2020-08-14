@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2]
+### Fixed
+- Fix edit item display issue in Chrome.
+
 ## [1.0.1]
 ### Added
 - Add a version file for reference.
