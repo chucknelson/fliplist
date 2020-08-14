@@ -5,7 +5,8 @@
 $large-screen-threshold: 45em;
 
 .animated {
-    -webkit-transition: 0.4s;
+		transition: 0.4s;
+		-webkit-transition: 0.4s;
 }
 
 #list-body {
@@ -27,27 +28,22 @@ $large-screen-threshold: 45em;
 
 				#plus {
 					width: 1em;
-					font-size: 1.4em; //this looks good on iPhone
+					font-size: 1.4em; // this looks good on iPhone
 					@media screen and (min-width: $large-screen-threshold) {
 						font-size: 1.5em;
 					}
 				}
 
 				#add-item {
-					padding-top: 3px; //strange fix
+					padding-top: 3px; // strange fix
 				}
 			}
 
 			&#new-item {
 				background-color: #ededed;
 				form {
-					//display: table-cell;
 					width: 100%;
 					vertical-align: middle;
-
-					div {
-						
-					}
 
 					#new-item-text {
 						width: 100%;
@@ -55,7 +51,7 @@ $large-screen-threshold: 45em;
 							width: 100%; 
 						}
 					}
-					
+
 					#new-item-actions {
 						margin-top: .25em;
 						text-align: right;
@@ -111,7 +107,6 @@ $large-screen-threshold: 45em;
 			}
 
 			.item-edit {
-				display: table-cell;
 				vertical-align: middle;
 				width: 100%;
 
@@ -121,10 +116,11 @@ $large-screen-threshold: 45em;
 
 				input[type=text] {
 					width: 100%;
-					@media screen and (min-width: $large-screen-threshold) {
-							width: 100%;
-						}
 					padding-left: .1em;
+				}
+				
+				.item-edit-input {
+					height: 50%;
 				}
 
 				.item-edit-links {
@@ -158,7 +154,6 @@ $large-screen-threshold: 45em;
 			&.ui-sortable-placeholder {
 				visibility: visible !important;
 				background-color: #efefef !important;
-				//border-top: 1px solid #ddd !important; 
 				border-bottom: 1px solid #ddd !important;
 			}
 
@@ -167,9 +162,11 @@ $large-screen-threshold: 45em;
 				border-top: 1px solid;
 				border-color: #333;
 
+				transform: rotateX(180deg);
 				-webkit-transform: rotateX(180deg);
 
 				&:first-child {
+					box-shadow: inset 0px -5px 5px -5px #333;
 					-webkit-box-shadow: inset 0px -5px 5px -5px #333;
 				}
 
@@ -183,11 +180,11 @@ $large-screen-threshold: 45em;
 				}
 
 				a { 
-					//font-size: .75em;
 					text-decoration: line-through;
 
-					//keep the text right-side up when flipped
-					//scaleY does NOT cause performance issues on iOS like rotateX does here
+					// keep the text right-side up when flipped
+					// scaleY does NOT cause performance issues on iOS like rotateX does here
+					transform: scaleY(-1) translateZ(1px);
 					-webkit-transform: scaleY(-1) translateZ(1px);
 				}
 
@@ -203,7 +200,6 @@ $large-screen-threshold: 45em;
 				{
 					color: #f77;
 					text-decoration: none;
-					//display: none;
 				}
 			}
 		}
