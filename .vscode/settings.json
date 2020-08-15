@@ -4,5 +4,10 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true
+  },
+  // Ruby extension settings
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "rubocop": true
   }
 }

@@ -11,6 +11,9 @@ group :development do
   gem 'web-console', '~> 4.0'
   # required for listening to file changes during development
   gem 'listen', '~> 3.2'
+  # rubocop for linting
+  gem 'rubocop', '~> 0.89.0', require: false
+  gem 'rubocop-rails', '~> 2.7.1', require: false
 end
 
 # Use SimpleCov for test coverage
