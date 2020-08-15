@@ -1,7 +1,7 @@
 # Add your own tasks in files placed in lib/tasks ending in .rake,
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
-require File.expand_path('../config/application', __FILE__)
+require File.expand_path('config/application', __dir__)
 
 Rails.application.load_tasks
 
@@ -9,14 +9,18 @@ Rails.application.load_tasks
 
 # Local development
 # See https://devcenter.heroku.com/articles/heroku-local
-task 'dev:local' do
+task 'dev:local': :environment do
   system 'heroku local -f Procfile.dev'
 end
 
-task 'format:check' do
+task 'format:check': :environment do
   system 'yarn prettier . --check --ignore-path .gitignore'
 end
 
-task 'format' do
+task 'format': :environment do
   system 'yarn prettier . --write --ignore-path .gitignore'
+end
+
+task 'lint:check': :environment do
+  system 'rubocop'
 end
