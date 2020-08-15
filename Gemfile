@@ -10,7 +10,7 @@ group :development do
   # cool interactive console that can be used if a page errors out
   gem 'web-console', '~> 4.0'
   # required for listening to file changes during development
-  gem "listen", "~> 3.2"
+  gem 'listen', '~> 3.2'
 end
 
 # Use SimpleCov for test coverage
@@ -19,11 +19,11 @@ group :test do
   gem 'sqlite3', '~> 1.4'
   # assigns has been extracted to a gem as of Rails 5.0
   gem 'rails-controller-testing', '~> 1.0'
-  gem 'simplecov', '~> 0.17', :require => false
+  gem 'simplecov', '~> 0.17', require: false
 end
 
 # Added in Rails 5.2 to improve app boot time
-gem "bootsnap", "~> 1.4"
+gem 'bootsnap', '~> 1.4'
 
 # Use postgres as the database to minimize compatability issues with Heroku
 gem 'pg', '~> 1.1'

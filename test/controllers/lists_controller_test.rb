@@ -1,18 +1,22 @@
 require 'test_helper'
 
 class ListsControllerTest < ActionController::TestCase
-
   def setup
     @user = users(:user1)
     init_user_session(@user)
   end
 
-  test "should route to user lists with /lists and /users/:id/lists" do
-    assert_routing "/lists", {controller: "lists", action: "index"}
-    assert_routing "/users/#{@user.id}/lists", {controller: "lists", action: "index", user_id: "#{@user.id}"}
+  test 'should route to user lists with /lists and /users/:id/lists' do
+    assert_routing '/lists', { controller: 'lists', action: 'index' }
+    assert_routing "/users/#{@user.id}/lists",
+                   {
+                     controller: 'lists',
+                     action: 'index',
+                     user_id: "#{@user.id}"
+                   }
   end
 
-  test "should have user with lists that have items" do
+  test 'should have user with lists that have items' do
     get :index
     assert_response :success
 
@@ -21,12 +25,13 @@ class ListsControllerTest < ActionController::TestCase
 
     first_list = user_lists.first
     assert first_list.items_remaining > 0
-    assert_equal first_list.items_remaining, first_list.items.where(completed: false).count
+    assert_equal first_list.items_remaining,
+                 first_list.items.where(completed: false).count
   end
 
-  test "should create an empty list successfully" do
-    new_list = List.new(title: "New List")
-    post :create, params: {user_id: @user.id, list: {title: new_list.title}}
+  test 'should create an empty list successfully' do
+    new_list = List.new(title: 'New List')
+    post :create, params: { user_id: @user.id, list: { title: new_list.title } }
     assert_response :redirect
 
     # Verify saved state
@@ -39,5 +44,4 @@ class ListsControllerTest < ActionController::TestCase
   def teardown
     # nothing yet
   end
-
 end

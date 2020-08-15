@@ -5,203 +5,200 @@
 $large-screen-threshold: 45em;
 
 .animated {
-		transition: 0.4s;
-		-webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
 }
 
 #list-body {
-	ul {
-		li {
-			&#new-item-placeholder {
-				background-color: #ededed;
+  ul {
+    li {
+      &#new-item-placeholder {
+        background-color: #ededed;
 
-				a { 
-					display: table;
-					color: #777;
-					text-shadow: 1px 1px 0px #fff;
-				}
+        a {
+          display: table;
+          color: #777;
+          text-shadow: 1px 1px 0px #fff;
+        }
 
-				span {
-					display: table-cell;
-					vertical-align: middle;
-				}
+        span {
+          display: table-cell;
+          vertical-align: middle;
+        }
 
-				#plus {
-					width: 1em;
-					font-size: 1.4em; // this looks good on iPhone
-					@media screen and (min-width: $large-screen-threshold) {
-						font-size: 1.5em;
-					}
-				}
+        #plus {
+          width: 1em;
+          font-size: 1.4em; // this looks good on iPhone
+          @media screen and (min-width: $large-screen-threshold) {
+            font-size: 1.5em;
+          }
+        }
 
-				#add-item {
-					padding-top: 3px; // strange fix
-				}
-			}
+        #add-item {
+          padding-top: 3px; // strange fix
+        }
+      }
 
-			&#new-item {
-				background-color: #ededed;
-				form {
-					width: 100%;
-					vertical-align: middle;
+      &#new-item {
+        background-color: #ededed;
+        form {
+          width: 100%;
+          vertical-align: middle;
 
-					#new-item-text {
-						width: 100%;
-						input { 
-							width: 100%; 
-						}
-					}
+          #new-item-text {
+            width: 100%;
+            input {
+              width: 100%;
+            }
+          }
 
-					#new-item-actions {
-						margin-top: .25em;
-						text-align: right;
-						
-						input, button {
-							margin-right: .5em;
-							padding: 0;
-							background: transparent;
-							border: 0;
-							font-weight: bold;
-						}
+          #new-item-actions {
+            margin-top: 0.25em;
+            text-align: right;
 
-						#new-item-cancel {
-							margin-right: 0;
-							color: red;
-							font-weight: normal;
-						}
+            input,
+            button {
+              margin-right: 0.5em;
+              padding: 0;
+              background: transparent;
+              border: 0;
+              font-weight: bold;
+            }
 
-					}
-				}
-			}
+            #new-item-cancel {
+              margin-right: 0;
+              color: red;
+              font-weight: normal;
+            }
+          }
+        }
+      }
 
-			&.editing {
-				background-color: #eee;
-			}
-			
-			.item-link {
-				width: 75%;
-				padding-right: .5em;
-			}
+      &.editing {
+        background-color: #eee;
+      }
 
-			.item-edit-link {
-				width: 5%;
-				@media screen and (min-width: $large-screen-threshold) {
-							width: 15%;
-						}
-				text-align: right;
+      .item-link {
+        width: 75%;
+        padding-right: 0.5em;
+      }
 
-				img {
-					height: 20px;
-					width: auto;
-					opacity: .6;
-				}
-			}
+      .item-edit-link {
+        width: 5%;
+        @media screen and (min-width: $large-screen-threshold) {
+          width: 15%;
+        }
+        text-align: right;
 
-			.item-delete-link {
-				width: 20%;
-				@media screen and (min-width: $large-screen-threshold) {
-							width: 10%;
-						}
-				text-align: right;
-				color: red;
-			}
+        img {
+          height: 20px;
+          width: auto;
+          opacity: 0.6;
+        }
+      }
 
-			.item-edit {
-				vertical-align: middle;
-				width: 100%;
+      .item-delete-link {
+        width: 20%;
+        @media screen and (min-width: $large-screen-threshold) {
+          width: 10%;
+        }
+        text-align: right;
+        color: red;
+      }
 
-				a {
-					display: inline;
-				}
+      .item-edit {
+        vertical-align: middle;
+        width: 100%;
 
-				input[type=text] {
-					width: 100%;
-					padding-left: .1em;
-				}
-				
-				.item-edit-input {
-					height: 50%;
-				}
+        a {
+          display: inline;
+        }
 
-				.item-edit-links {
-					margin-top: .25em;
-					text-align: right;
-					
-					a {
-						margin-right: .5em;
-					}
+        input[type="text"] {
+          width: 100%;
+          padding-left: 0.1em;
+        }
 
-					.item-edit-done {
-						font-weight: bolder;
-					}
+        .item-edit-input {
+          height: 50%;
+        }
 
-					.item-edit-cancel {
-						margin-right: 0;
-						color: red;
-					}
+        .item-edit-links {
+          margin-top: 0.25em;
+          text-align: right;
 
-				}
+          a {
+            margin-right: 0.5em;
+          }
 
-			}
+          .item-edit-done {
+            font-weight: bolder;
+          }
 
-			&.sorting-item { 
-				display: block;
-				background-color: #fff;
-				border-top: 1px solid #ddd; 
-				border-bottom: 1px solid #ddd; 
-			}
+          .item-edit-cancel {
+            margin-right: 0;
+            color: red;
+          }
+        }
+      }
 
-			&.ui-sortable-placeholder {
-				visibility: visible !important;
-				background-color: #efefef !important;
-				border-bottom: 1px solid #ddd !important;
-			}
+      &.sorting-item {
+        display: block;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+      }
 
-			&.flipped {
-				background-color: #555;
-				border-top: 1px solid;
-				border-color: #333;
+      &.ui-sortable-placeholder {
+        visibility: visible !important;
+        background-color: #efefef !important;
+        border-bottom: 1px solid #ddd !important;
+      }
 
-				transform: rotateX(180deg);
-				-webkit-transform: rotateX(180deg);
+      &.flipped {
+        background-color: #555;
+        border-top: 1px solid;
+        border-color: #333;
 
-				&:first-child {
-					box-shadow: inset 0px -5px 5px -5px #333;
-					-webkit-box-shadow: inset 0px -5px 5px -5px #333;
-				}
+        transform: rotateX(180deg);
+        -webkit-transform: rotateX(180deg);
 
-				&:not(:first-child) { 
-					border-bottom: none;
-				}
+        &:first-child {
+          box-shadow: inset 0px -5px 5px -5px #333;
+          -webkit-box-shadow: inset 0px -5px 5px -5px #333;
+        }
 
-				&.ui-sortable-placeholder {
-					border-top: 1px solid #ddd !important; 
-					border-bottom: none !important;
-				}
+        &:not(:first-child) {
+          border-bottom: none;
+        }
 
-				a { 
-					text-decoration: line-through;
+        &.ui-sortable-placeholder {
+          border-top: 1px solid #ddd !important;
+          border-bottom: none !important;
+        }
 
-					// keep the text right-side up when flipped
-					// scaleY does NOT cause performance issues on iOS like rotateX does here
-					transform: scaleY(-1) translateZ(1px);
-					-webkit-transform: scaleY(-1) translateZ(1px);
-				}
+        a {
+          text-decoration: line-through;
 
-				a.item-link {
-					color: #ccc;
-				}
+          // keep the text right-side up when flipped
+          // scaleY does NOT cause performance issues on iOS like rotateX does here
+          transform: scaleY(-1) translateZ(1px);
+          -webkit-transform: scaleY(-1) translateZ(1px);
+        }
 
-				a.item-edit-link {
-					display: none;
-				}
+        a.item-link {
+          color: #ccc;
+        }
 
-				a.item-delete-link
-				{
-					color: #f77;
-					text-decoration: none;
-				}
-			}
-		}
-	}
+        a.item-edit-link {
+          display: none;
+        }
+
+        a.item-delete-link {
+          color: #f77;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

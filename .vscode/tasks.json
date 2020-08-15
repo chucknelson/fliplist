@@ -13,5 +13,5 @@
     //   "type": "shell",
     //   "command": "cd test-project && rm -rf * && rm -f .ruby-version"
     // },
-  ],
+  ]
 }

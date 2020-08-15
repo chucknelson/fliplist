@@ -9,6 +9,14 @@ Rails.application.load_tasks
 
 # Local development
 # See https://devcenter.heroku.com/articles/heroku-local
-task :local_dev do
+task 'dev:local' do
   system 'heroku local -f Procfile.dev'
+end
+
+task 'format:check' do
+  system 'yarn prettier . --check --ignore-path .gitignore'
+end
+
+task 'format' do
+  system 'yarn prettier . --write --ignore-path .gitignore'
 end
