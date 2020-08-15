@@ -22,5 +22,6 @@ task 'format': :environment do
 end
 
 task 'lint:check': :environment do
-  system 'rubocop'
+  system 'bundle exec rubocop'
+  system 'yarn eslint . --ignore-path .gitignore'
 end
