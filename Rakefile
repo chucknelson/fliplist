@@ -4,3 +4,11 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+
+# Very simple tasks, so just putting them right in the Rakefile
+
+# Local development
+# See https://devcenter.heroku.com/articles/heroku-local
+task :local_dev do
+  system 'heroku local -f Procfile.dev'
+end
