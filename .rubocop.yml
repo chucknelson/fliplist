@@ -11,7 +11,7 @@
 
 require: rubocop-rails
 
-# Disable frozen string literal comment / pragma
+# Disable frozen string literals comment / pragma
 # Frozen string literals aren't going to be default in Ruby 3 or...ever?
 # https://bugs.ruby-lang.org/issues/11473#note-53
 Style/FrozenStringLiteralComment:
