@@ -9,8 +9,9 @@
 # For performance testing only
 500.times do |i|
   new_list = List.create(title: "Test List #{i}", user_id: 1)
-  
+
   10.times do |j|
-    new_item = new_list.items.create(name: "Test Item #{i}.#{j}", completed: false)
+    new_item =
+      new_list.items.create(name: "Test Item #{i}.#{j}", completed: false)
   end
 end

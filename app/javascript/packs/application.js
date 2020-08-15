@@ -14,11 +14,11 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-require('jquery')
-require('jquery-ujs')
-require('jquery-ui/ui/widgets/sortable')
-require('turbolinks').start()
+require("jquery");
+require("jquery-ujs");
+require("jquery-ui/ui/widgets/sortable");
+require("turbolinks").start();
 
-require('../global')
-require('../items')
-require('../lists')
+require("../global");
+require("../items");
+require("../lists");

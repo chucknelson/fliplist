@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-  
+
   resources :users do
     resources :lists do
       resources :items
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   get 'lists', to: 'lists#index'
 
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: %i[new create destroy]
   get 'login', to: 'sessions#new'
   delete 'logout', to: 'sessions#destroy'
 

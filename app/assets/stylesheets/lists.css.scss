@@ -3,40 +3,35 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #list-body {
-	ul {
-		li {
-			.list-name {
-				display: block;
-			}
+  ul {
+    li {
+      .list-name {
+        display: block;
+      }
 
-			.list-items-remaining {
-				display: block;
-				color: #999;
-			}
+      .list-items-remaining {
+        display: block;
+        color: #999;
+      }
 
-			//TODO - refacor, this is a lot of repeat code from flipped items
-			&.completed-list {
-				background-color: #555;
-				border-bottom: 1px solid;
-				border-color: #333;
+      //TODO - refacor, this is a lot of repeat code from flipped items
+      &.completed-list {
+        background-color: #555;
+        border-bottom: 1px solid;
+        border-color: #333;
 
-				&:first-child {
-					-webkit-box-shadow: inset 0px 5px 5px -5px #333;
-				}
+        &:first-child {
+          -webkit-box-shadow: inset 0px 5px 5px -5px #333;
+        }
 
-				.list-name {
-					color: #ccc;
-					text-decoration: line-through;
-				}
+        .list-name {
+          color: #ccc;
+          text-decoration: line-through;
+        }
 
-				.list-items-remaining {
-					
-				}
-			}
-
-			
-		}
-
-
-	}
+        .list-items-remaining {
+        }
+      }
+    }
+  }
 }

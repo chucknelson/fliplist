@@ -1,7 +1,7 @@
 require 'simplecov'
 SimpleCov.start 'rails'
 
-ENV["RAILS_ENV"] ||= "test"
+ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
@@ -18,7 +18,7 @@ class ActiveSupport::TestCase
 
   # Helper for updating a list item, verifying a successful response and reloading affected data.
   # TODO?
-  
+
   def init_user_session(user)
     session[:user_id] = user.id
   end
@@ -30,5 +30,4 @@ class ActiveSupport::TestCase
   def get_completed_item(list)
     list.items.find_by(completed: true)
   end
-
 end
