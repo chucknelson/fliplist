@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3]
+
+### Added
+
+- Use [Prettier](https://prettier.io/) for all formatting.
+- Use [RuboCop](https://docs.rubocop.org/) for linting.
+- Use `rake`/`rails` for common tasks.
+
+### Changed
+
+- Apply [Prettier](https://prettier.io/) formatting to all supported files.
+
 ## [1.0.2]
 
 ### Fixed

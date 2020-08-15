@@ -10,3 +10,9 @@
 # See https://docs.rubocop.org/rubocop/configuration
 
 require: rubocop-rails
+
+# Disable frozen string literal comment / pragma
+# Frozen string literals aren't going to be default in Ruby 3 or...ever?
+# https://bugs.ruby-lang.org/issues/11473#note-53
+Style/FrozenStringLiteralComment:
+  Enabled: false
