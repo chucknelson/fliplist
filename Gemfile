@@ -11,6 +11,9 @@ group :development do
   gem 'web-console', '~> 4.0'
   # required for listening to file changes during development
   gem 'listen', '~> 3.2'
+  # gems for debugging
+  gem 'ruby-debug-ide', '~> 0.7.2'
+  gem 'debase', '~> 0.2.4.1'
   # rubocop for linting
   gem 'rubocop', '~> 0.89.0', require: false
   gem 'rubocop-rails', '~> 2.7.1', require: false

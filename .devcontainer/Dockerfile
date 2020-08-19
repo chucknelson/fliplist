@@ -31,6 +31,9 @@ RUN apt-get update \
   # Install Heroku CLI
   && curl https://cli-assets.heroku.com/install.sh | sh \
   #
+  # Update bundler
+  && gem update bundler \
+  #
   # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
   && groupadd --gid $USER_GID $USERNAME \
   && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \

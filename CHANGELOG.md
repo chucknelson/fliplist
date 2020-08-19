@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add VS Code launch configs to allow easy running and debugging of both Rails/Ruby and client/Javascript.
+
+### Changed
+
+- Update installed VS Code extensions for dev container to match recommended extensions.
+
+### Fixed
+
+- Update bundler to 2.x in dev container so `Gemfile` works as expected.
+
 ## [1.0.3]
 
 ### Added
