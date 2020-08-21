@@ -12,8 +12,9 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     ports:
-      - 3000:3000
-      - 3035:3035 # webpack-dev-server
+      - 3000:3000 # Local dev rails server
+      - 3001:3001 # System test rails server (i.e., Capybara)
+      - 3035:3035 # Webpack dev server
     volumes:
       # Bind mount our code to /workspace
       - ..:/workspace
@@ -27,7 +28,7 @@ services:
     image: postgres:11.6
     restart: unless-stopped
     ports:
-      - 5432:5432
+      - 5432:5432 # default postgres
     environment:
       POSTGRES_PASSWORD: password
     volumes:
@@ -37,10 +38,13 @@ services:
     image: selenium/standalone-chrome-debug:3.141
     restart: unless-stopped
     ports:
-      - 4444:4444
-      - 5900:5900
+      - 4444:4444 # Selenium server
+      - 5900:5900 # VNC
     environment:
       VNC_NO_PASSWORD: 1
+    # See https://github.com/SeleniumHQ/docker-selenium#running-the-images
+    volumes:
+      - "/dev/shm:/dev/shm"
 
 volumes:
   db-data:

@@ -1,5 +1,8 @@
 require 'test_helper'
 
+SYSTEM_TEST_HOST = '0.0.0.0'.freeze
+SYSTEM_TEST_PORT = 3001
+
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
   driven_by :selenium,
             screen_size: [1400, 1400],
@@ -11,10 +14,10 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
             }
 
   # Where Capybara will host the app under test
-  Capybara.server_host = '0.0.0.0'
-  Capybara.server_port = '3000'
+  Capybara.server_host = SYSTEM_TEST_HOST
+  Capybara.server_port = SYSTEM_TEST_PORT
 
   # URL helpers (e.g., <model>_url) not included by default
   include Rails.application.routes.url_helpers
-  default_url_options[:host] = 'http://rails:3000'
+  default_url_options[:host] = "http://rails:#{SYSTEM_TEST_PORT}"
 end
