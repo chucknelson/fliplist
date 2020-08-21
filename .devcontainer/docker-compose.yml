@@ -1,6 +1,9 @@
 version: "3"
 services:
-  app:
+  # Using "rails" instead of typical "app" service name because of HTTP Strict Transport Security (HSTS)
+  # "app" as a host name in a URL forces HTTPS, which doesn't work with our local dev app
+  # See https://hstspreload.org/
+  rails:
     # Uncomment the next line to use a non-root user. On Linux, this will prevent
     # new files getting created as root, but you may need to update the USER_UID
     # and USER_GID in .devcontainer/Dockerfile to match your user if not 1000.
@@ -29,6 +32,15 @@ services:
       POSTGRES_PASSWORD: password
     volumes:
       - "db-data:/var/lib/postgresql/data"
+
+  selenium:
+    image: selenium/standalone-chrome-debug:3.141
+    restart: unless-stopped
+    ports:
+      - 4444:4444
+      - 5900:5900
+    environment:
+      VNC_NO_PASSWORD: 1
 
 volumes:
   db-data:

@@ -26,6 +26,9 @@ group :test do
   # assigns has been extracted to a gem as of Rails 5.0
   gem 'rails-controller-testing', '~> 1.0'
   gem 'simplecov', '~> 0.17', require: false
+  # gems for system tests
+  gem 'capybara', '~> 3.0'
+  gem 'selenium-webdriver', '~> 3.0'
 end
 
 # Added in Rails 5.2 to improve app boot time
