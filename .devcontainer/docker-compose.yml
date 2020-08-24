@@ -1,6 +1,9 @@
 version: "3"
 services:
-  app:
+  # Using "rails" instead of typical "app" service name because of HTTP Strict Transport Security (HSTS)
+  # "app" as a host name in a URL forces HTTPS, which doesn't work with our local dev app
+  # See https://hstspreload.org/
+  rails:
     # Uncomment the next line to use a non-root user. On Linux, this will prevent
     # new files getting created as root, but you may need to update the USER_UID
     # and USER_GID in .devcontainer/Dockerfile to match your user if not 1000.
@@ -9,8 +12,9 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     ports:
-      - 3000:3000
-      - 3035:3035 # webpack-dev-server
+      - 3000:3000 # Local dev rails server
+      - 3001:3001 # System test rails server (i.e., Capybara)
+      - 3035:3035 # Webpack dev server
     volumes:
       # Bind mount our code to /workspace
       - ..:/workspace
@@ -24,11 +28,23 @@ services:
     image: postgres:11.6
     restart: unless-stopped
     ports:
-      - 5432:5432
+      - 5432:5432 # default postgres
     environment:
       POSTGRES_PASSWORD: password
     volumes:
       - "db-data:/var/lib/postgresql/data"
+
+  selenium:
+    image: selenium/standalone-chrome-debug:3.141
+    restart: unless-stopped
+    ports:
+      - 4444:4444 # Selenium server
+      - 5900:5900 # VNC
+    environment:
+      VNC_NO_PASSWORD: 1
+    # See https://github.com/SeleniumHQ/docker-selenium#running-the-images
+    volumes:
+      - "/dev/shm:/dev/shm"
 
 volumes:
   db-data:

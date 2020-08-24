@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Start Webpack Dev Server",
+      "command": "${workspaceRoot}/bin/webpack-dev-server",
+      // Mark as a task that will keep running and has "ended" starting up when Angular server has started
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "base": "$tsc-watch",
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "anything",
+            "endsPattern": "webpack output is served from"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Wait for Rails Server",
+      "type": "shell",
+      // TODO cross-platform way to wait for server to be up
+      "command": "sleep 10"
+    },
+    {
+      "label": "Terminate All Tasks",
+      "command": "echo ${input:terminate}",
+      "type": "shell",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "terminate",
+      "type": "command",
+      "command": "workbench.action.tasks.terminate",
+      "args": "terminateAll"
+    }
+  ]
+}
