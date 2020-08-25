@@ -3,6 +3,26 @@
  * All this logic will automatically be available in application.js.
  */
 
+import Sortable from "sortablejs";
+
+$(document).on("turbolinks:load", () => {
+  const listItems = document.getElementById("list-items");
+  Sortable.create(listItems, {
+    filter: ".no-sort",
+    ghostClass: "ui-sortable-placeholder",
+    animation: 200,
+    easing: "cubic-bezier(0, 0.55, 0.45, 1)", // https://easings.net/#easeOutCirc
+
+    onStart: function (event) {
+      console.log("started!");
+    },
+
+    onEnd: function (event) {
+      console.log("ended!");
+    },
+  });
+});
+/*
 $(document).on("turbolinks:load", () =>
   $("#list-items").sortable({
     containment: "document",
@@ -62,3 +82,4 @@ $(document).on("turbolinks:load", () =>
     },
   })
 );
+*/
