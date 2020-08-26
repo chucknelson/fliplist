@@ -7,79 +7,36 @@ import Sortable from "sortablejs";
 
 $(document).on("turbolinks:load", () => {
   const listItems = document.getElementById("list-items");
-  Sortable.create(listItems, {
-    filter: ".no-sort",
-    ghostClass: "ui-sortable-placeholder",
-    animation: 200,
-    easing: "cubic-bezier(0, 0.55, 0.45, 1)", // https://easings.net/#easeOutCirc
 
-    onStart: function (event) {
-      console.log("started!");
-    },
+  if (listItems) {
+    Sortable.create(listItems, {
+      filter: ".no-sort",
+      ghostClass: "ui-sortable-placeholder",
+      animation: 150,
 
-    onEnd: function (event) {
-      console.log("ended!");
-    },
-  });
-});
-/*
-$(document).on("turbolinks:load", () =>
-  $("#list-items").sortable({
-    containment: "document",
-    items: "li",
-    cancel: ".no-sort",
+      onEnd: function (event) {
+        const item = $(event.item);
 
-    // defining the helper as a static li > table element works much better/easier than changing
-    // the entire list structure, styling, and animation to work with li > table elements
-    helper() {
-      return `
-      <li class="sorting-item">
-        <table style="width: 100%; height: 100%;">
-          <tr>
-            <td style="width: 80%; height: 100%; vertical-align: middle" class="item-link">
-              Helper Item Name
-            </td>
-            <td style="width: 20%; height: 100%; vertical-align: middle text-align: right;" class="item-delete-link">
-              Helper Delete Link
-            </td>
-          </tr>
-        </table>
-      </li>
-      `;
-    },
+        // Build new sort order request body
+        const newSort = {};
+        item
+          .parent()
+          .children()
+          .each(function () {
+            const itemID = $(this).attr("data-item-id");
+            const sortOrder = $(this).index();
+            newSort[itemID] = sortOrder;
+            return newSort;
+          });
 
-    start(event, ui) {
-      ui.item.addClass("sorting-item");
-      ui.placeholder.height(ui.helper.height());
-      ui.helper.find(".item-link").html(ui.item.find(".item-link").html());
-      return ui.helper
-        .find(".item-delete-link")
-        .html(ui.item.find(".item-delete-link").html());
-    },
-
-    stop(event, ui) {
-      return ui.item.removeClass("sorting-item");
-    },
-
-    update(event, ui) {
-      const newSort = {};
-      ui.item
-        .parent()
-        .children()
-        .each(function () {
-          const itemID = $(this).attr("data-item-id");
-          const sortOrder = $(this).index();
-          newSort[itemID] = sortOrder;
-          return newSort;
+        // Update sort order
+        return $.ajax({
+          url: item.parent().attr("data-ajax-sort-route"),
+          data: { sort: newSort },
+          type: "PATCH",
+          dataType: "script",
         });
-
-      return $.ajax({
-        url: ui.item.parent().attr("data-ajax-sort-route"),
-        data: { sort: newSort },
-        type: "PATCH",
-        dataType: "script",
-      });
-    },
-  })
-);
-*/
+      },
+    });
+  }
+});
