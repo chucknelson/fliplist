@@ -142,13 +142,6 @@ $large-screen-threshold: 45em;
         }
       }
 
-      &.sorting-item {
-        display: block;
-        background-color: #fff;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-      }
-
       &.ui-sortable-placeholder {
         visibility: visible !important;
         background-color: #efefef !important;
