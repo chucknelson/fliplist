@@ -7,6 +7,8 @@ ruby '2.6.6'
 gem 'rails', '~> 6.0.0'
 
 group :development do
+  # solargraph ruby language server
+  gem "solargraph", "~> 0.39.15"
   # cool interactive console that can be used if a page errors out
   gem 'web-console', '~> 4.0'
   # required for listening to file changes during development

@@ -5,9 +5,12 @@
     "source.fixAll": true,
     "source.organizeImports": true
   },
-  // Ruby extension settings
+  // Ruby extension
+  "ruby.useBundler": true,
   "ruby.useLanguageServer": true,
   "ruby.lint": {
     "rubocop": true
-  }
+  },
+  // Solargraph Ruby language server
+  "solargraph.useBundler": true
 }
