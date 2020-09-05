@@ -11,6 +11,7 @@ $(document).on("turbolinks:load", () => {
   if (listItems) {
     Sortable.create(listItems, {
       filter: ".no-sort",
+      preventOnFilter: false,
       ghostClass: "ui-sortable-placeholder",
       animation: 150,
 
