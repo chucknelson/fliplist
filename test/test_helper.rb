@@ -2,7 +2,7 @@ require 'simplecov'
 SimpleCov.start 'rails'
 
 ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../../config/environment', __FILE__)
+require File.expand_path('../config/environment', __dir__)
 require 'rails/test_help'
 
 class ActiveSupport::TestCase
@@ -29,5 +29,18 @@ class ActiveSupport::TestCase
 
   def get_completed_item(list)
     list.items.find_by(completed: true)
+  end
+
+  # System test helpers
+  def sign_in(user)
+    visit login_url
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: 'password' # Default password
+    click_button 'Log In'
+  end
+
+  def has_focus?(element)
+    active_element_id = page.evaluate_script('document.activeElement.id')
+    active_element_id == element[:id]
   end
 end

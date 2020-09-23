@@ -10,8 +10,7 @@
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
-  // Install dependencies from Gemfile
-  "postCreateCommand": "cat .devcontainer/.bashrc_custom >> ~/.bashrc && bundle install && yarn",
+  "postCreateCommand": "cat .devcontainer/.bashrc_custom >> ~/.bashrc && bundle install && solargraph bundle && yarn",
   // Add the IDs of extensions you want installed when the container is created in the array below.
   "extensions": [
     "dbaeumer.vscode-eslint",
