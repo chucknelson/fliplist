@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Replace [jQuery UI Sortable](https://jqueryui.com/sortable/) with [Sortable](https://github.com/SortableJS/Sortable).
+- Update to latest Ruby and Javascript dependencies.
 - Update installed VS Code extensions for dev container to match recommended extensions.
 
 ### Fixed
