@@ -1,6 +1,6 @@
 # For now, ensure ruby version here matches what's in our Gemfile
 # TODO: Find a better way to keep this in sync with the project?
-FROM ruby:2.6.6
+FROM ruby:2.7.7
 
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
